@@ -162,21 +162,22 @@ export default function ContactSection() {
                   <Mail className="w-6 h-6 flex-shrink-0 mt-1" />
                   <div>
                     <p className="text-blue-200 text-sm">Email</p>
-                    <p className="text-lg">contact@aimax.com</p>
+                    <p className="text-lg">anita9942@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <Phone className="w-6 h-6 flex-shrink-0 mt-1" />
                   <div>
-                    <p className="text-blue-200 text-sm">Phone</p>
-                    <p className="text-lg">02-1234-5678</p>
+                  <p className="text-blue-200 text-sm">Phone</p>
+                    <p className="text-lg">02-567-8301</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <MapPin className="w-6 h-6 flex-shrink-0 mt-1" />
                   <div>
                     <p className="text-blue-200 text-sm">Address</p>
-                    <p className="text-lg">서울특별시 강남구 테헤란로 123</p>
+                    <p className="text-lg">서울시 영등포구 여의대방로 53가길 16</p>
+                    <p className="text-lg">두성빌딩 510호</p>
                   </div>
                 </div>
               </div>

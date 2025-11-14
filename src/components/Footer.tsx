@@ -95,17 +95,17 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />
-                <span className="text-gray-400">contact@aimax.com</span>
+                <span className="text-gray-400">anita9942@gmail.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />
-                <span className="text-gray-400">02-1234-5678</span>
+                <span className="text-gray-400">02-567-8301</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-400">
-                  서울특별시 강남구<br />
-                  테헤란로 123
+                  서울시 영등포구 여의대방로 53가길 16<br />
+                  두성빌딩 510호
                 </span>
               </li>
             </ul>
