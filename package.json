@@ -57,6 +57,6 @@
       "scripts": {
             "dev": "vite",
             "build": "vite build",
-            "deploy": "vite build && gh-pages -d build"
+            "deploy": "vite build && echo 'www.aimax.io.kr' > ./build/CNAME && gh-pages -d build"
       }
 }
