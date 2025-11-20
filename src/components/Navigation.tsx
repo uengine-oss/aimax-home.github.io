@@ -4,6 +4,7 @@ import { Menu, X, Moon, Sun } from 'lucide-react';
 import { Button } from './ui/button';
 import { motion, AnimatePresence } from 'motion/react';
 import { useTheme } from '../contexts/ThemeContext';
+import aimaxLogo from '../images/aimax-logo.png';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,7 +60,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" onClick={handleLogoClick} className="flex items-center gap-2">
-            <img src="/src/images/aimax-logo.png" alt="Logo" className="w-50" />
+            <img src={aimaxLogo} alt="Logo" className="w-50" />
             {/* <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold">AI</span>
             </div>
