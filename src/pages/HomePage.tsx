@@ -2,9 +2,9 @@ import Navigation from '../components/Navigation';
 import HeroSection from '../components/HeroSection';
 import ProblemsSection from '../components/ProblemsSection';
 import ProcessSection from '../components/ProcessSection';
-import SuccessSection from '../components/SuccessSection';
+// import SuccessSection from '../components/SuccessSection';
 import AboutSection from '../components/AboutSection';
-import InsightsSection from '../components/InsightsSection';
+// import InsightsSection from '../components/InsightsSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
@@ -15,9 +15,9 @@ export default function HomePage() {
       <HeroSection />
       <ProblemsSection />
       <ProcessSection />
-      <SuccessSection />
+      {/* <SuccessSection /> */}
       <AboutSection />
-      <InsightsSection />
+      {/* <InsightsSection /> */}
       <ContactSection />
       <Footer />
     </div>

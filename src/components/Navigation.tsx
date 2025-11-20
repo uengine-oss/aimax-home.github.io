@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 import { Button } from './ui/button';
@@ -22,21 +22,34 @@ export default function Navigation() {
 
   const scrollToSection = (id: string) => {
     setIsMobileMenuOpen(false);
-    if (location.pathname !== '/') {
-      navigate('/');
-      setTimeout(() => {
+    
+    // 모바일 메뉴가 닫히는 시간을 고려한 딜레이 추가
+    setTimeout(() => {
+      if (location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => {
+          const element = document.getElementById(id);
+          element?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      } else {
         const element = document.getElementById(id);
         element?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    } else {
-      const element = document.getElementById(id);
-      element?.scrollIntoView({ behavior: 'smooth' });
-    }
+      }
+    }, 300); // 애니메이션 완료 대기
   };
 
   const navigateToPage = (path: string) => {
     setIsMobileMenuOpen(false);
     navigate(path);
+  };
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    if (location.pathname !== '/') {
+      navigate('/');
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -45,52 +58,71 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+          <Link to="/" onClick={handleLogoClick} className="flex items-center gap-2">
+            <img src="/src/images/aimax-logo.png" alt="Logo" className="w-50" />
+            {/* <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold">AI</span>
             </div>
             <span className="text-2xl font-bold flex items-baseline">
               <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">AI</span>
               <span className="text-3xl text-orange-500 mx-0.5">M</span>
               <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">AX</span>
-            </span>
+            </span> */}
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <button
+            {/* <button
               onClick={() => navigateToPage('/solutions')}
               className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Solutions
-            </button>
+            </button> */}
             <button
+              onClick={() => scrollToSection('solutions')}
+              className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Solutions
+            </button>
+            {/* <button
               onClick={() => navigateToPage('/process')}
               className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Process
-            </button>
+            </button> */}
             <button
+              onClick={() => scrollToSection('process')}
+              className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Process
+            </button>
+            {/* <button
               onClick={() => scrollToSection('success')}
               className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Success Stories
-            </button>
-            <button
+            </button> */}
+            {/* <button
               onClick={() => navigateToPage('/about')}
               className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               About
-            </button>
+            </button> */}
             <button
+              onClick={() => scrollToSection('about')}
+              className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              About
+            </button>
+            {/* <button
               onClick={() => scrollToSection('insights')}
               className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Insights
-            </button>
+            </button> */}
             
             {/* Theme Toggle */}
-            <button
+            {/* <button
               onClick={toggleTheme}
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               aria-label="Toggle theme"
@@ -100,7 +132,7 @@ export default function Navigation() {
               ) : (
                 <Sun className="w-5 h-5 text-slate-800 dark:text-slate-200" />
               )}
-            </button>
+            </button> */}
             
             <Button
               onClick={() => scrollToSection('contact')}
@@ -112,7 +144,7 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
-            <button
+            {/* <button
               onClick={toggleTheme}
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               aria-label="Toggle theme"
@@ -122,7 +154,7 @@ export default function Navigation() {
               ) : (
                 <Sun className="w-5 h-5 text-slate-800 dark:text-slate-200" />
               )}
-            </button>
+            </button> */}
             <button
               className="text-slate-800 dark:text-slate-200"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -142,36 +174,54 @@ export default function Navigation() {
               className="md:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-800"
             >
               <div className="py-4 space-y-4">
-                <button
+                {/* <button
                   onClick={() => navigateToPage('/solutions')}
                   className="block w-full text-left px-4 py-2 text-slate-800 dark:text-slate-200 font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   Solutions
-                </button>
+                </button> */}
                 <button
+                  onClick={() => scrollToSection('solutions')}
+                  className="block w-full text-left px-4 py-2 text-slate-800 dark:text-slate-200 font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
+                >
+                  Solutions
+                </button>
+                {/* <button
                   onClick={() => navigateToPage('/process')}
                   className="block w-full text-left px-4 py-2 text-slate-800 dark:text-slate-200 font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   Process
-                </button>
+                </button> */}
                 <button
+                  onClick={() => scrollToSection('process')}
+                  className="block w-full text-left px-4 py-2 text-slate-800 dark:text-slate-200 font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
+                >
+                  Process
+                </button>
+                {/* <button
                   onClick={() => scrollToSection('success')}
                   className="block w-full text-left px-4 py-2 text-slate-800 dark:text-slate-200 font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   Success Stories
-                </button>
-                <button
+                </button> */}
+                {/* <button
                   onClick={() => navigateToPage('/about')}
                   className="block w-full text-left px-4 py-2 text-slate-800 dark:text-slate-200 font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   About
-                </button>
+                </button> */}
                 <button
+                  onClick={() => scrollToSection('about')}
+                  className="block w-full text-left px-4 py-2 text-slate-800 dark:text-slate-200 font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
+                >
+                  About
+                </button>
+                {/* <button
                   onClick={() => scrollToSection('insights')}
                   className="block w-full text-left px-4 py-2 text-slate-800 dark:text-slate-200 font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   Insights
-                </button>
+                </button> */}
                 <div className="px-4">
                   <Button
                     onClick={() => scrollToSection('contact')}

@@ -57,7 +57,7 @@ export default function ProblemsSection() {
                 
                 <div className="relative z-10">
                   {/* Icon */}
-                  <div className="text-5xl mb-6">{item.icon}</div>
+                  {/* <div className="text-5xl mb-6">{item.icon}</div> */}
 
                   {/* Problem */}
                   <div className="mb-6">

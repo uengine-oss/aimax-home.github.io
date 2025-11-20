@@ -9,20 +9,21 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+              <img src="/src/images/aimax-logo.png" alt="Logo" className="w-40" />
+              {/* <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold">AI</span>
               </div>
               <span className="text-2xl font-bold flex items-baseline">
                 <span className="text-white">AI</span>
                 <span className="text-3xl text-orange-500 mx-0.5">M</span>
                 <span className="text-white">AX</span>
-              </span>
+              </span> */}
             </div>
             <p className="text-gray-400 mb-6">
               AI Experience for All<br />
               AI로 세상을 읽고, 경험으로 미래를 설계합니다
             </p>
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
@@ -32,11 +33,11 @@ export default function Footer() {
               <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Solutions */}
-          <div>
+          {/* <div>
             <h3 className="text-lg mb-4">Solutions</h3>
             <ul className="space-y-3">
               <li>
@@ -60,10 +61,10 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Company */}
-          <div>
+          {/* <div>
             <h3 className="text-lg mb-4">Company</h3>
             <ul className="space-y-3">
               <li>
@@ -87,7 +88,7 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact */}
           <div>

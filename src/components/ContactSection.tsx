@@ -66,7 +66,27 @@ export default function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="p-8 shadow-xl">
+            
+            {/* What You Get */}
+            <Card className="p-8">
+              <h3 className="text-2xl mb-6 text-gray-900">무료 컨설팅에서 받을 수 있는 것</h3>
+              <div className="space-y-4">
+                {[
+                  '귀사 산업 및 비즈니스에 특화된 AI 도입 로드맵',
+                  '예상 투자 대비 효과(ROI) 분석',
+                  '기술 스택 및 구현 방안 제안',
+                  '성공 사례 및 레퍼런스 공유',
+                  '3일 이내 전문가 미팅 일정 조율',
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                    <p className="text-gray-700">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </Card>
+
+             {/*<Card className="p-8 shadow-xl">
               <h3 className="text-2xl mb-6 text-gray-900">무료 컨설팅 신청</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -137,13 +157,13 @@ export default function ContactSection() {
                     </>
                   )}
                 </Button>
-              </form>
+              </form> */}
 
               {/* Privacy Notice */}
-              <p className="text-xs text-gray-500 mt-4">
+              {/* <p className="text-xs text-gray-500 mt-4">
                 제출하신 정보는 상담 목적으로만 사용되며, 개인정보 보호정책에 따라 안전하게 관리됩니다.
               </p>
-            </Card>
+            </Card> */}
           </motion.div>
 
           {/* Contact Info & Benefits */}
@@ -183,24 +203,6 @@ export default function ContactSection() {
               </div>
             </Card>
 
-            {/* What You Get */}
-            <Card className="p-8">
-              <h3 className="text-2xl mb-6 text-gray-900">무료 컨설팅에서 받을 수 있는 것</h3>
-              <div className="space-y-4">
-                {[
-                  '귀사 산업 및 비즈니스에 특화된 AI 도입 로드맵',
-                  '예상 투자 대비 효과(ROI) 분석',
-                  '기술 스택 및 구현 방안 제안',
-                  '성공 사례 및 레퍼런스 공유',
-                  '3일 이내 전문가 미팅 일정 조율',
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
-                    <p className="text-gray-700">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </Card>
 
             {/* Response Time */}
             <Card className="p-6 bg-blue-50 border-2 border-blue-200">
