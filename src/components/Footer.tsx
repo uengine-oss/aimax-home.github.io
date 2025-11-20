@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Github, Twitter } from 'lucide-react';
+import aimaxLogo from '../images/aimax-logo.png';
 
 export default function Footer() {
   return (
@@ -9,7 +10,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <img src="/src/images/aimax-logo.png" alt="Logo" className="w-40" />
+              <img src={aimaxLogo} alt="Logo" className="w-40" />
               {/* <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold">AI</span>
               </div>
