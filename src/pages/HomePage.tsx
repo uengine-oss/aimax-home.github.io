@@ -1,6 +1,7 @@
 import Navigation from '../components/Navigation';
 import HeroSection from '../components/HeroSection';
-import ProblemsSection from '../components/ProblemsSection';
+// import ProblemsSection from '../components/ProblemsSection';
+import ProcessgptSection from '../components/ProcessgptSection';
 import ProcessSection from '../components/ProcessSection';
 // import SuccessSection from '../components/SuccessSection';
 import AboutSection from '../components/AboutSection';
@@ -13,7 +14,8 @@ export default function HomePage() {
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
       <Navigation />
       <HeroSection />
-      <ProblemsSection />
+      {/* <ProblemsSection /> */}
+      <ProcessgptSection />
       <ProcessSection />
       {/* <SuccessSection /> */}
       <AboutSection />

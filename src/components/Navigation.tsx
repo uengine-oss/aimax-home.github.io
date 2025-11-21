@@ -80,7 +80,7 @@ export default function Navigation() {
               Solutions
             </button> */}
             <button
-              onClick={() => scrollToSection('solutions')}
+              onClick={() => scrollToSection('processgpt')}
               className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Solutions
@@ -182,7 +182,7 @@ export default function Navigation() {
                   Solutions
                 </button> */}
                 <button
-                  onClick={() => scrollToSection('solutions')}
+                  onClick={() => scrollToSection('processgpt')}
                   className="block w-full text-left px-4 py-2 text-slate-800 dark:text-slate-200 font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   Solutions

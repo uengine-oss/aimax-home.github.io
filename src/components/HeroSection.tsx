@@ -134,11 +134,17 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-blue-100 mb-2 max-w-4xl mx-auto"
           >
             금융의 리스크를 줄이고, 제조의 효율을 극대화하는 AIMAX의 AI 파트너십
-            <br />
-            <span className="text-blue-200">지금, 당신의 비즈니스에 성장의 모멘텀을 더하세요.</span>
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl md:text-2xl text-blue-100 mb-12 max-w-4xl mx-auto text-blue-200"
+          >
+            지금, 당신의 비즈니스에 성장의 모멘텀을 더하세요.
           </motion.p>
 
           <motion.div
