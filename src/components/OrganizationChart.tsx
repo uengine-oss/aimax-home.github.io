@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Users, Brain, TrendingUp, Zap, Boxes, Briefcase } from 'lucide-react';
+import { useRef, useState, useEffect } from 'react';
 
 const organizationData = {
   company: {
@@ -66,6 +67,42 @@ const organizationData = {
 };
 
 export default function OrganizationChart() {
+  const centerWrapper1Ref = useRef<HTMLDivElement>(null);
+  const centerWrapper2Ref = useRef<HTMLDivElement>(null);
+  const [verticalLineHeight, setVerticalLineHeight] = useState(110);
+
+  useEffect(() => {
+    const updateLineHeight = () => {
+      if (centerWrapper1Ref.current && centerWrapper2Ref.current) {
+        const height1 = centerWrapper1Ref.current.offsetHeight;
+        const height2 = centerWrapper2Ref.current.offsetHeight;
+        const maxHeight = Math.max(height1, height2);
+        setVerticalLineHeight(maxHeight);
+      }
+    };
+
+    // 초기 높이 설정
+    updateLineHeight();
+
+    // ResizeObserver로 크기 변화 감지
+    const resizeObserver = new ResizeObserver(updateLineHeight);
+    
+    if (centerWrapper1Ref.current) {
+      resizeObserver.observe(centerWrapper1Ref.current);
+    }
+    if (centerWrapper2Ref.current) {
+      resizeObserver.observe(centerWrapper2Ref.current);
+    }
+
+    // 윈도우 리사이즈 이벤트도 감지
+    window.addEventListener('resize', updateLineHeight);
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener('resize', updateLineHeight);
+    };
+  }, []);
+
   return (
     <div className="py-20 bg-gradient-to-b from-white to-blue-50">
       <div className="container mx-auto px-4">
@@ -136,13 +173,13 @@ export default function OrganizationChart() {
           </motion.div>
 
           {/* Vertical Line */}
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <div style={{
               width: '2px',
               height: '48px',
               background: 'linear-gradient(to bottom, #2563eb, #60a5fa)'
             }}></div>
-          </div>
+          </div> */}
 
           {/* Centers Level */}
           <motion.div
@@ -165,6 +202,7 @@ export default function OrganizationChart() {
                 </div>
               </Card>
             ))} */}
+            <div ref={centerWrapper1Ref} className="py-8">
             <Card 
               className="p-6 bg-blue-50 border-2 border-blue-200 hover:shadow-lg transition-all duration-300"
               style={{
@@ -175,33 +213,31 @@ export default function OrganizationChart() {
                 <h5 className="text-xl font-bold text-gray-900 mb-2">{organizationData.centers1.name}</h5>
                 <p className="text-gray-600 text-sm">{organizationData.centers1.leader}</p>
               </div>
-            </Card>
+            </Card></div>
 
             {/* Connection Lines */}
-          <div className="relative" style={{ height: '100px' }}>
-            {/* Vertical line from top */}
-            <div style={{
-              position: 'absolute',
-              left: '80%',
-              top: '-5px',
-              width: '2px',
-              height: '110px',
-              background: 'linear-gradient(to bottom, #60a5fa, #60a5fa)',
-              transform: 'translateX(-80%)'
-            }}></div>
-            
-            {/* Horizontal line */}
-            <div style={{
-              position: 'absolute',
-              left: '-35px',
-              right: '0',
-              top: '50px',
-              width: '70px',
-              height: '2px',
-              background: 'linear-gradient(to right, transparent, #93c5fd 10%, #93c5fd 90%, transparent)'
-            }}></div>
-          </div>
+            <div className="relative" style={{ height: `${verticalLineHeight}px` }}>
+              {/* Vertical line from top */}
+              <div style={{
+                width: '2px',
+                height: `${verticalLineHeight}px`,
+                background: 'linear-gradient(to bottom, #60a5fa, #60a5fa)',
+                transform: 'translateX(-80%)'
+              }}></div>
+              
+              {/* Horizontal line */}
+              <div style={{
+                position: 'absolute',
+                left: '-35px',
+                right: '0',
+                top: `${verticalLineHeight / 2}px`,
+                width: '70px',
+                height: '2px',
+                background: 'linear-gradient(to right, transparent, #93c5fd 10%, #93c5fd 90%, transparent)'
+              }}></div>
+            </div>
 
+            <div ref={centerWrapper2Ref} className="py-8">
             <Card 
               className="p-6 bg-blue-50 border-2 border-blue-200 hover:shadow-lg transition-all duration-300"
             >
@@ -209,28 +245,18 @@ export default function OrganizationChart() {
                 <h5 className="text-xl font-bold text-gray-900 mb-2">{organizationData.centers2.name}</h5>
                 <p className="text-gray-600 text-sm">{organizationData.centers2.leader}</p>
               </div>
-            </Card>
+            </Card></div>
           </motion.div>
 
           {/* Connection Lines */}
-          <div className="relative" style={{ height: '64px' }}>
-            {/* Vertical line from top */}
-            <div style={{
-              position: 'absolute',
-              left: '50%',
-              top: '0',
-              width: '2px',
-              height: '32px',
-              background: 'linear-gradient(to bottom, #60a5fa, #93c5fd)',
-              transform: 'translateX(-50%)'
-            }}></div>
+          <div className="relative" style={{ height: '32px' }}>
             
             {/* Horizontal line */}
             <div style={{
               position: 'absolute',
               left: '0',
               right: '0',
-              top: '32px',
+              top: '0',
               height: '2px',
               background: 'linear-gradient(to right, transparent, #93c5fd 10%, #93c5fd 90%, transparent)'
             }}></div>
@@ -239,47 +265,15 @@ export default function OrganizationChart() {
             <div style={{
               position: 'absolute',
               left: '8.33%',
-              top: '32px',
+              top: '0',
               width: '2px',
               height: '32px',
               background: '#93c5fd'
             }}></div>
-            {/* <div style={{
-              position: 'absolute',
-              left: '25%',
-              top: '32px',
-              width: '2px',
-              height: '32px',
-              background: '#93c5fd'
-            }}></div>
-            <div style={{
-              position: 'absolute',
-              left: '41.67%',
-              top: '32px',
-              width: '2px',
-              height: '32px',
-              background: '#93c5fd'
-            }}></div>
-            <div style={{
-              position: 'absolute',
-              left: '58.33%',
-              top: '32px',
-              width: '2px',
-              height: '32px',
-              background: '#93c5fd'
-            }}></div>
-            <div style={{
-              position: 'absolute',
-              left: '75%',
-              top: '32px',
-              width: '2px',
-              height: '32px',
-              background: '#93c5fd'
-            }}></div> */}
             <div style={{
               position: 'absolute',
               left: '91.67%',
-              top: '32px',
+              top: '0',
               width: '2px',
               height: '32px',
               background: '#93c5fd'
@@ -305,7 +299,7 @@ export default function OrganizationChart() {
               >
                 <Card className="p-6 h-full hover:shadow-xl transition-all duration-300 border-2 hover:border-blue-500 bg-white">
                   <div className="flex flex-col items-center text-center">
-                    <h5 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                    <h5 className="text-lg font-bold text-gray-900 mb-3 min-h-[3rem] flex items-center">
                       {dept.name}
                     </h5>
                     <div className="space-y-1">
