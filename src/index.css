@@ -692,6 +692,10 @@
   .mb-16 {
     margin-bottom: calc(var(--spacing) * 16);
   }
+  
+  .mb-20 {
+    margin-bottom: calc(var(--spacing) * 20);
+  }
 
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
@@ -1133,6 +1137,12 @@
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
+  }
+
+  .border-b-15 {
+    width: 60%;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
   }
 
   .border-blue-100 {
@@ -1765,6 +1775,10 @@
     padding-top: calc(var(--spacing) * 8);
   }
 
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
+  }
+
   .pt-32 {
     padding-top: calc(var(--spacing) * 32);
   }
@@ -1775,6 +1789,10 @@
 
   .pb-20 {
     padding-bottom: calc(var(--spacing) * 20);
+  }
+
+  .pb-32 {
+    padding-bottom: calc(var(--spacing) * 32);
   }
 
   .text-center {
@@ -3262,4 +3280,19 @@ html {
   syntax: "*";
   inherits: false;
   initial-value: 1;
+}
+
+/* Custom Organization Chart Department Box Styles */
+.org-dept-box {
+  flex-basis: calc((100% - 1.5rem) / 2);
+  max-width: calc((100% - 1.5rem) / 2);
+  min-width: calc((100% - 1.5rem) / 2);
+}
+
+@media (min-width: 1024px) {
+  .org-dept-box {
+    flex-basis: calc((100% - 7.5rem) / 6);
+    max-width: calc((100% - 7.5rem) / 6);
+    min-width: calc((100% - 7.5rem) / 6);
+  }
 }

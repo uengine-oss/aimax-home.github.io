@@ -73,6 +73,18 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
+            <button
+              onClick={() => scrollToSection('about')}
+              className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              About
+            </button>
+            <button
+              onClick={() => scrollToSection('process')}
+              className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Process
+            </button>
             {/* <button
               onClick={() => navigateToPage('/solutions')}
               className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -91,12 +103,6 @@ export default function Navigation() {
             >
               Process
             </button> */}
-            <button
-              onClick={() => scrollToSection('process')}
-              className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Process
-            </button>
             {/* <button
               onClick={() => scrollToSection('success')}
               className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -109,12 +115,7 @@ export default function Navigation() {
             >
               About
             </button> */}
-            <button
-              onClick={() => scrollToSection('about')}
-              className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              About
-            </button>
+            
             {/* <button
               onClick={() => scrollToSection('insights')}
               className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -175,6 +176,18 @@ export default function Navigation() {
               className="md:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-800"
             >
               <div className="py-4 space-y-4">
+                <button
+                  onClick={() => scrollToSection('about')}
+                  className="block w-full text-left px-4 py-2 text-slate-800 dark:text-slate-200 font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
+                >
+                  About
+                </button>
+                <button
+                  onClick={() => scrollToSection('process')}
+                  className="block w-full text-left px-4 py-2 text-slate-800 dark:text-slate-200 font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
+                >
+                  Process
+                </button>
                 {/* <button
                   onClick={() => navigateToPage('/solutions')}
                   className="block w-full text-left px-4 py-2 text-slate-800 dark:text-slate-200 font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
@@ -193,12 +206,6 @@ export default function Navigation() {
                 >
                   Process
                 </button> */}
-                <button
-                  onClick={() => scrollToSection('process')}
-                  className="block w-full text-left px-4 py-2 text-slate-800 dark:text-slate-200 font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
-                >
-                  Process
-                </button>
                 {/* <button
                   onClick={() => scrollToSection('success')}
                   className="block w-full text-left px-4 py-2 text-slate-800 dark:text-slate-200 font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
@@ -211,12 +218,6 @@ export default function Navigation() {
                 >
                   About
                 </button> */}
-                <button
-                  onClick={() => scrollToSection('about')}
-                  className="block w-full text-left px-4 py-2 text-slate-800 dark:text-slate-200 font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
-                >
-                  About
-                </button>
                 {/* <button
                   onClick={() => scrollToSection('insights')}
                   className="block w-full text-left px-4 py-2 text-slate-800 dark:text-slate-200 font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"

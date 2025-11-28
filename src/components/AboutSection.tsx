@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Card } from './ui/card';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Users, Target, Lightbulb, Award } from 'lucide-react';
+import OrganizationChart from './OrganizationChart';
 
 const teamMembers = [
   {
@@ -45,7 +46,7 @@ const values = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-blue-50 to-white">
+    <section id="about" className="pt-20 bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -203,6 +204,9 @@ export default function AboutSection() {
           </div>
         </motion.div>
       </div>
+
+      {/* 조직도 */}
+      <OrganizationChart />
     </section>
   );
 }

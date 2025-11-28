@@ -14,11 +14,11 @@ export default function HomePage() {
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
       <Navigation />
       <HeroSection />
-      {/* <ProblemsSection /> */}
-      <ProcessgptSection />
-      <ProcessSection />
-      {/* <SuccessSection /> */}
       <AboutSection />
+      <ProcessSection />
+      <ProcessgptSection />
+      {/* <ProblemsSection /> */}
+      {/* <SuccessSection /> */}
       {/* <InsightsSection /> */}
       <ContactSection />
       <Footer />
