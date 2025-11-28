@@ -165,10 +165,7 @@ export default function HeroSection() {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection('contact')}
-              className="border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-blue-900 px-8 py-6 font-bold"
-              style={{
-                cursor: 'pointer'
-              }}
+              className="border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-blue-900 px-8 py-6 font-bold cursor-pointer"
             >
               무료 컨설팅 받기
             </Button>

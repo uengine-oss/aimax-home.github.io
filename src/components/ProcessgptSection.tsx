@@ -71,7 +71,7 @@ export default function ProcessgptSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
-              <Card className="p-8 h-full hover:shadow-xl transition-all duration-300 group cursor-pointer border-2 hover:border-blue-500 relative overflow-hidden">
+              <Card className="p-8 h-full hover:shadow-xl transition-all duration-300 group border-2 hover:border-blue-500 relative overflow-hidden">
                 {/* Background Gradient on Hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 

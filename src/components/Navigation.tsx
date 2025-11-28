@@ -75,13 +75,13 @@ export default function Navigation() {
           <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection('about')}
-              className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('process')}
-              className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer"
             >
               Process
             </button>
@@ -93,7 +93,7 @@ export default function Navigation() {
             </button> */}
             <button
               onClick={() => scrollToSection('processgpt')}
-              className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="text-slate-800 dark:text-slate-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer"
             >
               Solutions
             </button>
@@ -138,7 +138,7 @@ export default function Navigation() {
             
             <Button
               onClick={() => scrollToSection('contact')}
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold shadow-lg"
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold shadow-lg cursor-pointer"
             >
               Contact Us
             </Button>
