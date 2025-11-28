@@ -153,19 +153,22 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button
+            {/* <Button
               size="lg"
               onClick={() => scrollToSection('solutions')}
               className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-6"
             >
               AIMAX 접근법 보기
               <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            </Button> */}
             <Button
               size="lg"
               variant="outline"
               onClick={() => scrollToSection('contact')}
               className="border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-blue-900 px-8 py-6 font-bold"
+              style={{
+                cursor: 'pointer'
+              }}
             >
               무료 컨설팅 받기
             </Button>
