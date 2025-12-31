@@ -2,9 +2,10 @@ import { motion } from 'motion/react';
 import { CheckCircle2 } from 'lucide-react';
 import { Card } from './ui/card';
 import how01Image from '@/images/how-01.png';
-import how02Image from '@/images/how-02.gif';
-import how03Image from '@/images/how-03.png';
+import how02Image from '@/images/how-02.png';
+import how03Image from '@/images/how-03.gif';
 import how04Image from '@/images/how-04.png';
+import how05Image from '@/images/how-05.png';
 
 const Processgpt = [
   {
@@ -118,9 +119,9 @@ export default function ProcessgptSection() {
         </motion.div>
       </div>
 
-      {/* ProcessGPT 작동방식 */}
+      {/* Process GPT의 핵심 기능 */}
       <div className="container mx-auto px-4 pt-20">
-        {/* 1. 에이전트 선언 */}
+        {/* 1. 사람·에이전트 협업형 업무 실행 */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -133,30 +134,22 @@ export default function ProcessgptSection() {
               <img src={how01Image} alt="ProcessGPT 에이전트 설정" className="rounded-lg w-full" />
             </div>
             <div className="w-full md:w-1/2">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6 text-left border-b-15">1. 에이전트 선언</h3>
+              <h3 className="font-bold text-gray-900 mb-6 text-left border-b-15">1. 사람·에이전트 협업형 업무 실행</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>일반 에이전트와 A2A 에이전트를 등록·관리합니다.</span>
+                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>에이전트는 실무를 실행하고, 사람은 승인 및 결정을 담당합니다.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>각 에이전트에 페르소나와 역할을 부여합니다.</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>문서와 데이터를 온톨로지 기반으로 관리해 학습과 실행에 활용합니다.</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>필요한 도구와 권한을 연결해 업무 자동화와 시스템 연동을 수행할 수 있도록 구성합니다.</span>
+                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>BPMN 기반으로 업무 흐름을 시각화하고 팀 단위 협업을 자동화합니다.</span>
                 </li>
               </ul>
             </div>
           </div>
         </motion.div>
 
-        {/* 2. 프로세스 생성 */}
+        {/* 2. 스템 간 연결(A2A) 자동화 */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -169,30 +162,26 @@ export default function ProcessgptSection() {
               <img src={how02Image} alt="ProcessGPT 프로세스 생성" className="rounded-lg w-full" />
             </div>
             <div className="w-full md:w-1/2">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6 text-left border-b-15">2. 프로세스 생성</h3>
+              <h3 className="font-bold text-gray-900 mb-6 text-left border-b-15">2. 시스템 간 연결(A2A) 자동화</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>목표를 입력하면 태스크, 양식, 체크포인트가 자동 정의됩니다.</span>
+                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>ERP, CRM, 그룹웨어 등 주요 시스템을 자동으로 연결합니다.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>워크차트에서 사람과 에이전트의 역할이 선언됩니다.</span>
+                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>데이터 조회, 입력, 문서 첨부 등 반복적인 작업을 자동 처리합니다.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>Open API 명세와 프로세스 데이터를 해석해 MCP·A2A 연동 방식을 제안합니다.</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>입력폼과 승인 절차까지 포함해 구성되며, 자연어 수정이나 BPMN 편집이 가능합니다.</span>
+                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>외부 API 및 MCP 툴과 연동하여 내외부 시스템 화면을 제어합니다.</span>
                 </li>
               </ul>
             </div>
           </div>
         </motion.div>
 
-        {/* 3. 프로세스 실행 */}
+        {/* 3. 프로세스 자동 생성 */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -205,34 +194,58 @@ export default function ProcessgptSection() {
               <img src={how03Image} alt="ProcessGPT 프로세스 실행" className="rounded-lg w-full" />
             </div>
             <div className="w-full md:w-1/2">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6 text-left border-b-15">3. 프로세스 실행</h3>
+              <h3 className="font-bold text-gray-900 mb-6 text-left border-b-15">3. 프로세스 자동 생성</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>등록된 에이전트로 Crew를 구성해 자율적으로 실행합니다.</span>
+                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>자연어로 업무를 설명하면 BPMN 프로세스가 자동으로 모델링됩니다.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>ERP, 메일, 협업툴은 MCP를 통해 자동으로 처리되며, 업무 실행 결과는 시스템에 반영되거나 필요한 산출물(예: 문서, 보고서)로 출력됩니다.</span>
+                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>휴먼 승인 및 검토 단계를 자동으로 삽입합니다.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>프로세스와 에이전트는 A2A 서비스로 노출되어 외부 호출이 가능합니다.</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>내부 검색·오피스 도구를 활용할 수 있는 실행 중심 환경을 제공합니다.</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>모바일은 음성·이미지, 데스크톱은 텍스트 입력을 지원해 어디서나 업무 연속성이 보장됩니다.</span>
+                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>부서별, 역할별 업무 흐름을 자동으로 구성합니다.</span>
                 </li>
               </ul>
             </div>
           </div>
         </motion.div>
 
-        {/* 4. 개선 */}
+        {/* 4. 지식 자동 축적 및 재사용 */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-6xl mx-auto mb-20"
+        >
+          <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
+            <div className="w-full md:w-1/2" style={{borderRadius: '15px', border: '10px solid #efefef'}}>
+              <img src={how04Image} alt="ProcessGPT 개선" className="rounded-lg w-full" />
+            </div>
+            <div className="w-full md:w-1/2">
+              <h3 className="font-bold text-gray-900 mb-6 text-left border-b-15">4. 지식 자동 축적 및 재사용</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
+                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>AI가 업무를 수행하면서 지속적으로 학습합니다.</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
+                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>규칙, 메타데이터, 온톨로지를 자동으로 보강하여 업무 매뉴얼 및 룰북 생성에 활용합니다.</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
+                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>사람의 피드백을 통해 프로세스를 지속적으로 개선합니다.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* 5. 멀티모달 인터페이스 */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -240,37 +253,30 @@ export default function ProcessgptSection() {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto"
         >
-          <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
+          <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="w-full md:w-1/2" style={{borderRadius: '15px', border: '10px solid #efefef'}}>
-              <img src={how04Image} alt="ProcessGPT 개선" className="rounded-lg w-full" />
+              <img src={how05Image} alt="ProcessGPT 프로세스 실행" className="rounded-lg w-full" />
             </div>
             <div className="w-full md:w-1/2">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6 text-left border-b-15">4. 개선</h3>
+              <h3 className="font-bold text-gray-900 mb-6 text-left border-b-15">5. 멀티모달 인터페이스</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>실행 데이터를 피드백 루프로 축적합니다.</span>
+                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>웹 기반 MCP(브라우저/데스크톱)와 모바일 앱 환경을 모두 지원하여 다양한 사용자의 업무 환경에 대응합니다.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>에이전트는 반복 실행을 통해 성능을 학습·향상합니다.</span>
+                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>내근직은 정밀한 프로세스 설계 UI를, 외근·영업직은 음성/이미지 기반 모바일 인터페이스를 제공합니다.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>개선된 지식은 온톨로지에 반영되어 프로세스와 태스크 설계에 활용됩니다.</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>사람은 새로운 지식·규칙을 추가해 에이전트를 재훈련할 수 있습니다.</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-blue-600 mr-2" />
-                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>조직은 데이터 기반으로 점진적으로 고도화된 운영 환경을 확보합니다.</span>
+                  <span className="text-gray-700" style={{fontWeight: 'bold'}}>사용 환경에 따라 선택 가능한 멀티 인터페이스를 제공함으로써, 업무 장소나 기기에 구애받지 않고 일관된 사용자 경험과 작업 연속성을 확보할 수 있습니다.</span>
                 </li>
               </ul>
             </div>
           </div>
         </motion.div>
+
       </div>
     </section>
   );

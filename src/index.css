@@ -1140,9 +1140,27 @@
   }
 
   .border-b-15 {
-    width: 60%;
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+
+  .border-b-15::after {
+    content: '';
+    display: block;
+    width: 98%;
+    padding-top: 15px;
     border-bottom: 1px solid #333;
-    padding-bottom: 15px;
+  }
+
+  @media (max-width: 768px) {
+    .border-b-15 {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+
+    .border-b-15::after {
+      width: 100%;
+    }
   }
 
   .border-blue-100 {
