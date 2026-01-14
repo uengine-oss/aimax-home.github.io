@@ -59,7 +59,7 @@ export default function AboutSection() {
             About AIMAX
           </h2>
           <p className="text-2xl text-blue-600 mb-4">
-            AI로 세상을 읽고, 경험으로 미래를 설계합니다
+            AI로 세상을 읽고, 경험으로 미래를 설계합니다.
           </p>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             AIMAX는 AI 기술과 산업 전문성을 결합하여 기업의 디지털 전환을 성공으로 이끄는 AI 컨설팅 파트너입니다

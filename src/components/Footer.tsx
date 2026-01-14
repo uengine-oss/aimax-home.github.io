@@ -22,7 +22,7 @@ export default function Footer() {
             </div>
             <p className="text-gray-400 mb-6">
               AI Experience for All<br />
-              AI로 세상을 읽고, 경험으로 미래를 설계합니다
+              AI로 세상을 읽고, 경험으로 미래를 설계합니다.
             </p>
             {/* <div className="flex gap-4">
               <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">

@@ -118,7 +118,7 @@ export default function AboutPage() {
               About AIMAX
             </h1>
             <p className="text-2xl text-blue-100 mb-4">
-              AI로 세상을 읽고, 경험으로 미래를 설계합니다
+              AI로 세상을 읽고, 경험으로 미래를 설계합니다.
             </p>
             <p className="text-xl text-blue-200">
               AIMAX는 AI 기술과 산업 전문성을 결합하여
