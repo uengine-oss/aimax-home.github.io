@@ -56,7 +56,7 @@ export default function ProcessgptSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl mb-4 text-gray-900">
-          제품 소개 - ProcessGPT
+          제품 소개 - AIMAX Agent Orchestrator
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             코딩 없이 대화만으로, AI 에이전트가 비즈니스 프로세스를 설계하고 실행합니다

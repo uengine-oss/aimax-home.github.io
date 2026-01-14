@@ -15,6 +15,7 @@ const organizationData = {
   centers1: {
     name: 'AI 연구센터',
     leader: '장진영 AI센터장(이사)',
+    subLeader: '정석진 팀장',
   },
   centers2: {
     name: '경영전략본부',
@@ -40,7 +41,7 @@ const organizationData = {
     },
     {
       name: 'AI Biz융합본부',
-      leaders: ['이호태 본부장(이사)'],
+      leaders: ['이호태 본부장(이사)', '김한수 이사'],
       icon: Briefcase,
     },
     {
@@ -59,8 +60,8 @@ const organizationData = {
       icon: Briefcase,
     },
     {
-      name: 'AI 교육팀',
-      leader: '정석진 팀장',
+      name: 'AI 교육센터',
+      leader: '이장래 센터장',
       icon: Users,
     },
   ],
@@ -212,6 +213,7 @@ export default function OrganizationChart() {
               <div className="text-center">
                 <h5 className="text-xl font-bold text-gray-900 mb-2">{organizationData.centers1.name}</h5>
                 <p className="text-gray-600 text-sm">{organizationData.centers1.leader}</p>
+                <p className="text-gray-600 text-sm">{organizationData.centers1.subLeader}</p>
               </div>
             </Card></div>
 
