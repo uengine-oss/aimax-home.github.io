@@ -108,7 +108,7 @@ export default function ProcessgptSection() {
             <div className="text-center">
               <div>
                 <p className="text-lg text-blue-100">
-                  <strong>Process GPT는 생성 AI(LLM)의 기능을 활용하여 비즈니스 프로세스를 자연어로 정의하고 실행 가능한 모델로 변환합니다.</strong>
+                  <strong>Agent Orchestrator는 생성 AI(LLM)의 기능을 활용하여 비즈니스 프로세스를 자연어로 정의하고 실행 가능한 모델로 변환합니다.</strong>
                 </p>
                 <p className="text-blue-200 mt-2">
                   이를 통해 전통적인 BPM 작업을 단순화하여 비용과 노력을 줄일 수 있고, LangChain과 Chat-GPT 모델을 통합하여 실행과 정의를 원활하게 합니다.
@@ -119,7 +119,7 @@ export default function ProcessgptSection() {
         </motion.div>
       </div>
 
-      {/* Process GPT의 핵심 기능 */}
+      {/* Agent Orchestrator의 핵심 기능 */}
       <div className="container mx-auto px-4 pt-20">
         {/* 1. 사람·에이전트 협업형 업무 실행 */}
         <motion.div
@@ -131,7 +131,7 @@ export default function ProcessgptSection() {
         >
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="w-full md:w-1/2" style={{borderRadius: '15px', border: '10px solid #efefef'}}>
-              <img src={how01Image} alt="ProcessGPT 에이전트 설정" className="rounded-lg w-full" />
+              <img src={how01Image} alt="Agent Orchestrator 에이전트 설정" className="rounded-lg w-full" />
             </div>
             <div className="w-full md:w-1/2">
               <h3 className="font-bold text-gray-900 mb-6 text-left border-b-15">1. 사람·에이전트 협업형 업무 실행</h3>
@@ -159,7 +159,7 @@ export default function ProcessgptSection() {
         >
           <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
             <div className="w-full md:w-1/2" style={{borderRadius: '15px', border: '10px solid #efefef'}}>
-              <img src={how02Image} alt="ProcessGPT 프로세스 생성" className="rounded-lg w-full" />
+              <img src={how02Image} alt="Agent Orchestrator 프로세스 생성" className="rounded-lg w-full" />
             </div>
             <div className="w-full md:w-1/2">
               <h3 className="font-bold text-gray-900 mb-6 text-left border-b-15">2. 시스템 간 연결(A2A) 자동화</h3>
@@ -191,7 +191,7 @@ export default function ProcessgptSection() {
         >
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="w-full md:w-1/2" style={{borderRadius: '15px', border: '10px solid #efefef'}}>
-              <img src={how03Image} alt="ProcessGPT 프로세스 실행" className="rounded-lg w-full" />
+              <img src={how03Image} alt="Agent Orchestrator 프로세스 실행" className="rounded-lg w-full" />
             </div>
             <div className="w-full md:w-1/2">
               <h3 className="font-bold text-gray-900 mb-6 text-left border-b-15">3. 프로세스 자동 생성</h3>
@@ -223,7 +223,7 @@ export default function ProcessgptSection() {
         >
           <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
             <div className="w-full md:w-1/2" style={{borderRadius: '15px', border: '10px solid #efefef'}}>
-              <img src={how04Image} alt="ProcessGPT 개선" className="rounded-lg w-full" />
+              <img src={how04Image} alt="Agent Orchestrator 개선" className="rounded-lg w-full" />
             </div>
             <div className="w-full md:w-1/2">
               <h3 className="font-bold text-gray-900 mb-6 text-left border-b-15">4. 지식 자동 축적 및 재사용</h3>
@@ -255,7 +255,7 @@ export default function ProcessgptSection() {
         >
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="w-full md:w-1/2" style={{borderRadius: '15px', border: '10px solid #efefef'}}>
-              <img src={how05Image} alt="ProcessGPT 프로세스 실행" className="rounded-lg w-full" />
+              <img src={how05Image} alt="Agent Orchestrator 프로세스 실행" className="rounded-lg w-full" />
             </div>
             <div className="w-full md:w-1/2">
               <h3 className="font-bold text-gray-900 mb-6 text-left border-b-15">5. 멀티모달 인터페이스</h3>
